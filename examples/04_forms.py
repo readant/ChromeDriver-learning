@@ -4,18 +4,37 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.service import Service
 import sys
 import os
+
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from config import get_driver_path
 import time
 
+
 def get_driver():
+    """
+    获取 Chrome 浏览器驱动实例
+    
+    Returns:
+        webdriver.Chrome: Chrome 浏览器驱动实例
+    """
     driver_path = get_driver_path()
     if driver_path:
         return webdriver.Chrome(service=Service(driver_path))
     from webdriver_manager.chrome import ChromeDriverManager
     return webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 
+
 def form_operations():
+    """
+    表单操作示例
+    
+    演示表单元素的操作：
+    1. 定位输入框
+    2. 输入文本内容
+    3. 清空输入框
+    4. 使用键盘快捷键提交表单（Keys.ENTER）
+    5. 获取页面标题验证操作结果
+    """
     driver = get_driver()
     
     try:
@@ -38,6 +57,7 @@ def form_operations():
         
     finally:
         driver.quit()
+
 
 if __name__ == "__main__":
     form_operations()

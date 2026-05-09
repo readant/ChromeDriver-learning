@@ -1,0 +1,33 @@
+{
+  "resourceManagement": {
+    "imageFormats": ["png", "jpg", "svg", "gif"],
+    "videoFormats": ["mp4", "webm", "avi"],
+    "maxFileSize": 10485760,
+    "namingConvention": "{date}-{topic}-{sequence}.{ext}",
+    "dateFormat": "YYYY-MM-DD"
+  },
+  "directories": {
+    "images": {
+      "path": "resources/images",
+      "subdirs": ["diagrams", "screenshots", "icons"]
+    },
+    "videos": {
+      "path": "resources/videos",
+      "subdirs": ["demos", "tutorials"]
+    },
+    "screenshots": {
+      "path": "resources/screenshots",
+      "subdirs": ["by-date", "by-topic"]
+    }
+  },
+  "backup": {
+    "enabled": true,
+    "interval": "daily",
+    "location": "backup/resources"
+  },
+  "versionControl": {
+    "smallFiles": true,
+    "largeFiles": false,
+    "threshold": 10485760
+  }
+}

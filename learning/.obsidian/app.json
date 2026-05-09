@@ -1,0 +1,82 @@
+{
+  "attachmentFolderPath": "resources",
+  "newFileLocation": "folder",
+  "newFileFolderPath": "notes",
+  "useMarkdownLinks": true,
+  "showUnsupportedFiles": true,
+  "promptDelete": true,
+  "alwaysUpdateLinks": true,
+  "readableLineLength": true,
+  "foldHeading": true,
+  "foldIndent": true,
+  "showLineNumber": true,
+  "spellcheck": false,
+  "vimMode": false,
+  "showInlineTitle": true,
+  "showFrontmatter": true,
+  "propertiesInDocument": "visible",
+  "livePreview": true,
+  "strictLineBreaks": false,
+  "defaultViewMode": "source",
+  "properties": {
+    "enabled": [
+      {
+        "type": "tags",
+        "helperText": "标签"
+      },
+      {
+        "type": "text",
+        "name": "status",
+        "helperText": "状态"
+      },
+      {
+        "type": "text",
+        "name": "category",
+        "helperText": "分类"
+      },
+      {
+        "type": "text",
+        "name": "difficulty",
+        "helperText": "难度"
+      },
+      {
+        "type": "date",
+        "name": "created",
+        "helperText": "创建日期"
+      },
+      {
+        "type": "date",
+        "name": "modified",
+        "helperText": "修改日期"
+      }
+    ]
+  },
+  "tagPane": {
+    "expanded": true,
+    "displayOrder": "alphabetical",
+    "showNestedTags": true,
+    "showTagsCount": true
+  },
+  "graph": {
+    "local": true,
+    "global": true,
+    "hoverPreview": true,
+    "showOrphans": true,
+    "drag": true,
+    "zoom": true
+  },
+  "backlinks": {
+    "collapseLinks": true,
+    "showBacklinks": true,
+    "showUnlinked": true
+  },
+  "outgoingLinks": {
+    "collapseLinks": true
+  },
+  "canvas": {
+    "enabled": true
+  },
+  "wordCount": {
+    "enabled": true
+  }
+}

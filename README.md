@@ -8,6 +8,8 @@
 
 **🌏 国内用户友好**：提供国内镜像下载地址、国内测试网站示例、网络问题解决方案
 
+**📚 学习系统**：基于 Obsidian 的个人学习记录系统，支持双向链接、知识图谱、资源管理
+
 ## 📚 目录结构
 
 ```
@@ -18,6 +20,19 @@ ChromeDriver-learning/
 ├── .gitignore                   # Git 忽略配置
 ├── requirements.txt             # Python 依赖
 ├── config.py                    # 配置文件
+├── learning/                    # 学习系统（Obsidian）
+│   ├── .obsidian/              # Obsidian 配置
+│   ├── notes/                  # 学习笔记
+│   ├── templates/              # 笔记模板
+│   ├── code-snippets/          # 代码片段
+│   ├── resources/              # 资源文件
+│   │   ├── images/            # 图片资源
+│   │   ├── videos/            # 视频资源
+│   │   └── screenshots/       # 截图
+│   ├── experiments/           # 实验项目
+│   ├── archive/               # 归档文件
+│   ├── README.md              # 学习系统指南
+│   └── ARCHITECTURE.md       # 系统架构
 ├── docs/                        # 学习文档
 │   ├── 01-installation.md       # 安装指南（国内镜像）
 │   ├── 02-principle.md          # 原理介绍
@@ -46,6 +61,7 @@ ChromeDriver-learning/
 - Python 3.8+
 - Chrome 浏览器
 - ChromeDriver（与 Chrome 版本匹配）
+- Obsidian（可选，用于学习系统）
 
 ### 安装步骤（国内用户推荐）
 
@@ -147,6 +163,46 @@ element = wait.until(EC.element_to_be_clickable((By.ID, "su")))
 element.click()
 ```
 
+## 📚 学习系统
+
+### 系统特性
+
+- 📝 **Obsidian 风格**：基于 Markdown 的笔记系统
+- 🔗 **双向链接**：建立知识网络，支持反向链接
+- 🏷️ **标签管理**：灵活的标签分类系统
+- 📊 **知识图谱**：可视化知识关系
+- 📸 **资源集成**：图片、视频、截图统一管理
+- 📅 **每日记录**：跟踪学习进度
+- 🎯 **实践记录**：记录项目实践过程
+- 💻 **代码片段**：可复用的代码库
+
+### 快速开始
+
+1. **安装 Obsidian**
+   - 下载：https://obsidian.md/
+   - 安装并打开
+
+2. **打开学习系统**
+   - 选择"打开文件夹"
+   - 选择 `learning` 目录
+
+3. **开始学习**
+   - 使用模板创建笔记
+   - 添加双向链接
+   - 管理资源文件
+
+详细使用指南：[学习系统使用指南](learning/README.md)
+
+### 笔记类型
+
+| 类型 | 用途 | 模板 |
+|------|------|------|
+| 每日记录 | 记录每日学习进度 | daily-note-template.md |
+| 概念笔记 | 记录学习到的概念 | concept-template.md |
+| 实践笔记 | 记录实践项目 | practice-template.md |
+| 问题笔记 | 记录问题和解决方案 | problem-template.md |
+| 代码片段 | 记录可复用代码 | code-snippet-template.md |
+
 ## 🌏 国内用户专属
 
 ### 常用国内测试网站
@@ -179,6 +235,7 @@ element.click()
 
 - [Selenium](https://www.selenium.dev/) - 自动化测试框架
 - [ChromeDriver](https://sites.google.com/chromium.org/driver/) - Chrome 浏览器驱动
+- [Obsidian](https://obsidian.md/) - 强大的笔记应用
 
 ---
 

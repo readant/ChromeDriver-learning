@@ -3,17 +3,37 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 import sys
 import os
+
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from config import get_driver_path
 
+
 def get_driver():
+    """
+    获取 Chrome 浏览器驱动实例
+    
+    Returns:
+        webdriver.Chrome: Chrome 浏览器驱动实例
+    """
     driver_path = get_driver_path()
     if driver_path:
         return webdriver.Chrome(service=Service(driver_path))
     from webdriver_manager.chrome import ChromeDriverManager
     return webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 
+
 def element_locator():
+    """
+    元素定位示例
+    
+    演示多种元素定位方式：
+    1. 通过 ID 定位（最快、最稳定）
+    2. 通过 Name 定位
+    3. 通过 Class Name 定位
+    4. 通过 XPath 定位（灵活但性能较差）
+    5. 通过 CSS 选择器定位（推荐）
+    6. 通过 Tag Name 定位（返回多个元素）
+    """
     driver = get_driver()
     
     try:
@@ -39,6 +59,7 @@ def element_locator():
         
     finally:
         driver.quit()
+
 
 if __name__ == "__main__":
     element_locator()

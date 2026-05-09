@@ -1,0 +1,23 @@
+{
+  "enabled": [
+    "daily-notes",
+    "tag-pane",
+    "graph",
+    "backlinks",
+    "outgoing-links",
+    "word-count",
+    "properties"
+  ],
+  "daily-notes": {
+    "format": "YYYY-MM-DD",
+    "template": "templates/daily-note-template.md",
+    "folder": "notes/daily",
+    "dateFormat": "YYYY-MM-DD"
+  },
+  "tag-pane": {
+    "expanded": true,
+    "displayOrder": "alphabetical",
+    "showNestedTags": true,
+    "showTagsCount": true
+  }
+}

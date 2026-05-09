@@ -2,17 +2,34 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 import sys
 import os
+
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from config import get_driver_path
 
+
 def get_driver():
+    """
+    获取 Chrome 浏览器驱动实例
+    
+    Returns:
+        webdriver.Chrome: Chrome 浏览器驱动实例
+    """
     driver_path = get_driver_path()
     if driver_path:
         return webdriver.Chrome(service=Service(driver_path))
     from webdriver_manager.chrome import ChromeDriverManager
     return webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 
+
 def advanced_features():
+    """
+    高级功能示例
+    
+    演示以下高级功能：
+    1. 截图功能：保存当前页面截图
+    2. Cookie 操作：获取、添加、删除 Cookie
+    3. 执行 JavaScript：通过 execute_script 执行 JS 代码
+    """
     driver = get_driver()
     
     try:
@@ -42,6 +59,7 @@ def advanced_features():
         
     finally:
         driver.quit()
+
 
 if __name__ == "__main__":
     advanced_features()
